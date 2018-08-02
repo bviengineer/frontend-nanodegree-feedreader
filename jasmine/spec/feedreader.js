@@ -32,6 +32,17 @@ $(function() {
          * and that the URL is not empty.
          */
 
+        describe("Each Feed", function(){
+            //loops through the allFeeds array and return
+            for(let i = 0; i < allFeeds.length; i++){
+                let feed = allFeeds[i];
+                return feed;
+            }
+            it("to have an URL", function(){
+                expect(feed.url).toBe.url;
+                expect(feed.length).not.toBe(0);
+            });
+        });
 
         /* TODO: Write a test that loops through each feed
          * in the allFeeds object and ensures it has a name defined
