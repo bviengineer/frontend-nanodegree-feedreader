@@ -33,13 +33,13 @@ $(function() {
          */
 
         describe("Each Feed", function(){
-            //loops through the allFeeds array and return
+            //loops through the allFeeds array and return each object individually inside the feed variable
             for(let i = 0; i < allFeeds.length; i++){
                 let feed = allFeeds[i];
                 return feed;
             }
             it("to have an URL", function(){
-                expect(feed.url).toBe.url;
+                expect(feed.url).toBeDefined();
                 expect(feed.length).not.toBe(0);
             });
         });
