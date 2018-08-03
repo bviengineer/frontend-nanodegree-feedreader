@@ -32,18 +32,13 @@ $(function() {
          * and that the URL is not empty.
          */
 
-        describe("Each Feed", function(){
-            //loops through the allFeeds array and return each object individually inside the feed variable
+        it("to have an URL", function(){
             for(let i = 0; i < allFeeds.length; i++){
-                let feed = allFeeds[i];
-                return feed;
+                expect(allFeeds[i].url).toBeDefined;
+                expect(allFeeds[i].url.length).not.toBe(0);
             }
-            it("to have an URL", function(){
-                expect(feed.url).toBeDefined();
-                expect(feed.length).not.toBe(0);
-            });
         });
-
+        
         /* TODO: Write a test that loops through each feed
          * in the allFeeds object and ensures it has a name defined
          * and that the name is not empty.
