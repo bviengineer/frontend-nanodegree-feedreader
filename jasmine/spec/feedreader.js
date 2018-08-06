@@ -101,7 +101,7 @@ $(function() {
             done();
         });
 
-        it("completed work", function(done){
+        it("load feed completed its work", function(done){
             const container = document.getElementsByClassName("feed");
             expect(container.length > 0).not.toBe(false);
             done();
