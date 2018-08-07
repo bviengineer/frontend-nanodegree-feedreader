@@ -49,7 +49,6 @@ $(function() {
                 expect(allFeeds[i].name.length).not.toBe(0);
             }
         });
-
     });
 
 
@@ -106,12 +105,32 @@ $(function() {
             expect(container.length > 0).not.toBe(false);
             done();
         });
+    });
+    
+ /* TODO: Write a new test suite named "New Feed Selection" */
+    describe("New Feed Selection", function(){
 
-    /* TODO: Write a new test suite named "New Feed Selection" */
-
+        const feedsCollecction = document.getElementsByClassName("feed")[0];
+        const feeds = feedsCollecction.children;
+        let feedsArray = [];
+        //console.log(feeds);
+    
         /* TODO: Write a test that ensures when a new feed is loaded
          * by the loadFeed function that the content actually changes.
          * Remember, loadFeed() is asynchronous.
          */
+        it("content changes when a new feed is loaded", function(){
+            for(let i = 0; i < feeds.length; i++){
+                expect(feedsArray.push(feeds[i]).length).not.toBe(0);
+            }            
+            
+            console.log(feedsArray);
+        
+            // beforeEach(function(done){
+            //     loadFeed(0);
+            //     loadFeed(1);
+            //     done();
+            // });
+        });
     });
 }());
