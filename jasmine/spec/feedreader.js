@@ -54,6 +54,10 @@ $(function() {
 
     /*Test suite named "The menu" */
     describe("The menu", function(){
+        
+        //variables to be used in both menu tests
+        const bodyElement = document.querySelector("body");
+        const menuItem = document.querySelector(".menu-icon-link");
 
         /* TODO: Write a test that ensures the menu element is
          * hidden by default. You'll have to analyze the HTML and
@@ -61,8 +65,6 @@ $(function() {
          * hiding/showing of the menu element.
          */
         it("is hidden by default", function(){
-            const bodyElement = document.querySelector("body");
-
             expect(bodyElement.classList).toContain("menu-hidden");
         });
 
@@ -70,11 +72,11 @@ $(function() {
           * visibility when the menu icon is clicked. This test
           * should have two expectations: does the menu display when
           * clicked and does it hide when clicked again.
-          */
-         it("toggles between visible and hidden when clicked", function(){
-            const bodyElement = document.querySelector("body");
-            const menuItem = document.querySelector(".menu-icon-link");
 
+          * The following source was helpful in identifying the best method [click()] to use to perform this test as all other attempts were unsuccessful
+            1. https://matthewcranford.com/feed-reader-walkthrough-part-3-menu-test-suite/
+        */
+         it("switches between visible and hidden when clicked", function(){
             //verifies that the menu is invisible when clicked
             menuItem.click();
                 expect(bodyElement.classList).not.toContain("menu-hidden");
@@ -84,7 +86,11 @@ $(function() {
                 expect(bodyElement.classList).toContain("menu-hidden");
          });
     });
-
+/*
+The following sources did the best job explaning or simplifying the async tests. Please update course to do the same or provide a more thorough explanation in this subject 
+1. https://matthewcranford.com/feed-reader-walkthrough-part-4-async-tests/
+2. https://github.com/PlaySnowi/Feed-Reader-Testing/blob/master/jasmine/spec/feedreader.js
+*/
     /* TODO: Write a new test suite named "Initial Entries" */
     describe("Initial Entries", function(){
         const feedContainer = document.getElementsByClassName("feed");
