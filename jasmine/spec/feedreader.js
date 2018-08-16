@@ -114,8 +114,7 @@ $(function() {
         *Remember, loadFeed() is asynchronous.
         */
 
-        let firstFeed, 
-            secondFeed;
+        let firstFeed, secondFeed;
         
         beforeEach(function(done){
             loadFeed(0, function(){
