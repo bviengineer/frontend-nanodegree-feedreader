@@ -95,8 +95,9 @@ $(function() {
          * Remember, loadFeed() is asynchronous so this test will require
          * the use of Jasmine's beforeEach and asynchronous done() function.
          */
-        beforeEach(function(){
+        beforeEach(function(done){
             loadFeed(0);
+            done();
         });
 
         it("load feed completed its work", function(){
