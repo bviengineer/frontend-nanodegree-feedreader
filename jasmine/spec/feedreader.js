@@ -85,10 +85,10 @@ $(function() {
          });
     });
 
-
     /* TODO: Write a new test suite named "Initial Entries" */
     describe("Initial Entries", function(){
-        
+        const feedContainer = document.getElementsByClassName("feed");
+
         /* TODO: Write a test that ensures when the loadFeed
          * function is called and completes its work, there is at least
          * a single .entry element within the .feed container.
@@ -100,8 +100,7 @@ $(function() {
             done();
         });
 
-        it("load feed completed its work", function(){
-            const feedContainer = document.getElementsByClassName("feed");  
+        it("load feed completed its work", function(){  
             expect(feedContainer.length).not.toBe(0);
         });
     });
@@ -114,16 +113,17 @@ $(function() {
         *Remember, loadFeed() is asynchronous.
         */
 
+        //variables will hold feeds loaded by the loadFeed
         let firstFeed, secondFeed;
         
         beforeEach(function(done){
             loadFeed(0, function(){
                 firstFeed = document.querySelector(".entry").innerText;
-                console.log(firstFeed);
+                console.log(firstFeed); //verifies content
 
                 loadFeed(1, function(){
                     secondFeed = document.querySelector(".entry").innerText;
-                    console.log(secondFeed)
+                    console.log(secondFeed) //verifies content 
 
                     done();
                 });
@@ -131,7 +131,7 @@ $(function() {
         });
             
         it("content changes", function(){
-            expect(firstFeed).not.toBe(secondFeed);
+            expect(firstFeed === secondFeed).not.toBe(true);
         });
     });
 }());
