@@ -107,29 +107,33 @@ $(function() {
     });
     
  /* TODO: Write a new test suite named "New Feed Selection" */
-    // describe("New Feed Selection", function(){
+    describe("New Feed Selection", function(){
+        const feed = document.getElementsByClassName("entry");
+        console.log(feed);
 
-    //     const feedsCollecction = document.getElementsByClassName("feed")[0];
-    //     const feeds = feedsCollecction.children;
-    //     let feedsArray = [];
-    //     //console.log(feeds);
-    
-    //     /* TODO: Write a test that ensures when a new feed is loaded
-    //      * by the loadFeed function that the content actually changes.
-    //      * Remember, loadFeed() is asynchronous.
-    //      */
-    //     it("content changes when a new feed is loaded", function(){
-    //         for(let i = 0; i < feeds.length; i++){
-    //             expect(feedsArray.push(feeds[i]).length).not.toBe(0);
-    //         }            
+        let feed1;
+        let feed2;        
             
-    //         console.log(feedsArray);
+        /* TODO: Write a test that ensures when a new feed is loaded
+        *by the loadFeed function that the content actually changes.
+        *Remember, loadFeed() is asynchronous.
+        */
         
-            // beforeEach(function(done){
-            //     loadFeed(0);
-            //     loadFeed(1);
-            //     done();
-            // });
-        // });
-    // });
+        beforeEach(function(done){
+            loadFeed(0, function(){
+                feed1 = feed;
+                console.log("1st feed");
+
+                loadFeed(1, function(){
+                    feed2 = feed;
+
+                    done();
+                });
+            });
+        });
+            
+        it("content changes", function(){
+            expect(feed1).not.toBe(feeds2);
+        });
+        });
 }());
