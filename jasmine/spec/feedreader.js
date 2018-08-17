@@ -92,7 +92,8 @@ The following sources did the best job explaning or simplifying the async tests.
 */
     /* Test suite named "Initial Entries" */
     describe("Initial Entries", function(){
-        const feedContainer = document.getElementsByClassName("feed");
+        const feedContainer = document.querySelector(".feed");
+        console.log(feedContainer.children); //verifying content 
 
         /* Test ensures when the loadFeed
          * function is called and completes its work, there is at least
@@ -100,12 +101,11 @@ The following sources did the best job explaning or simplifying the async tests.
          * loadFeed() is asynchronous 
          */
         beforeEach(function(done){
-            loadFeed(0);
-            done();
+            loadFeed(0, done);
         });
 
         it("load feed completed its work", function(){  
-            expect(feedContainer.length).not.toBe(0);
+            expect(feedContainer.children.length).toBeGreaterThan(0);
         });
     });
     
