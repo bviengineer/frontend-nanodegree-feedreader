@@ -4,11 +4,12 @@ This project consists of a web-based application that reads RSS feeds. In it's o
 * The menu element is hidden by default and toggles between open and close when clicked
 * The initial feeds loaded are unique and are not duplicates, using asynchornous testing methods
 
-## Takeaway
-I have added to my skillset, the foundation of writing tests using Jasmine and the Red, Green, Refactor (TDD) methodology. Testing provides the benefit of understanding whehter new code will break or improve existing feature(s).
-
 ## Access to Project
-* Clone the repository and open the index.html file in your browser.
+* Clone the repository and open the index.html file in your browser
+* Alternatively, download the project as a zip file, unzip the folder and open the index.html file in your browser
+
+## Takeaway
+Writing test using the Red, Green, Refactor (TDD) methodology, provides the benefit of understanding whehter new code will break or will not have any affect on [a] feature(s).
 
 ## Credits
 The following sources proved helpful during the development of this project:

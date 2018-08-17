@@ -54,24 +54,23 @@ $(function() {
 
     /*Test suite named "The menu" */
     describe("The menu", function(){
-        
+
         //variables to be used in both menu tests
         const bodyElement = document.querySelector("body");
         const menuItem = document.querySelector(".menu-icon-link");
 
-        /* TODO: Write a test that ensures the menu element is
-         * hidden by default. You'll have to analyze the HTML and
-         * the CSS to determine how we're performing the
-         * hiding/showing of the menu element.
+        /* Test ensures the menu element is
+         * hidden by default.
          */
         it("is hidden by default", function(){
             expect(bodyElement.classList).toContain("menu-hidden");
         });
 
-         /* TODO: Write a test that ensures the menu changes
-          * visibility when the menu icon is clicked. This test
-          * should have two expectations: does the menu display when
-          * clicked and does it hide when clicked again.
+         /* Test ensures the menu changes
+          * visibility when the menu icon is clicked. 
+          * This test have two expectations: 
+          *     a. the menu display when clicked and 
+          *     b. it hides when clicked again.
 
           * The following source was helpful in identifying the best method [click()] to use to perform this test as all other attempts were unsuccessful
             1. https://matthewcranford.com/feed-reader-walkthrough-part-3-menu-test-suite/
@@ -91,15 +90,14 @@ The following sources did the best job explaning or simplifying the async tests.
 1. https://matthewcranford.com/feed-reader-walkthrough-part-4-async-tests/
 2. https://github.com/PlaySnowi/Feed-Reader-Testing/blob/master/jasmine/spec/feedreader.js
 */
-    /* TODO: Write a new test suite named "Initial Entries" */
+    /* Test suite named "Initial Entries" */
     describe("Initial Entries", function(){
         const feedContainer = document.getElementsByClassName("feed");
 
-        /* TODO: Write a test that ensures when the loadFeed
+        /* Test ensures when the loadFeed
          * function is called and completes its work, there is at least
          * a single .entry element within the .feed container.
-         * Remember, loadFeed() is asynchronous so this test will require
-         * the use of Jasmine's beforeEach and asynchronous done() function.
+         * loadFeed() is asynchronous 
          */
         beforeEach(function(done){
             loadFeed(0);
@@ -111,12 +109,12 @@ The following sources did the best job explaning or simplifying the async tests.
         });
     });
     
- /* TODO: Write a new test suite named "New Feed Selection" */
+ /* Test suite named "New Feed Selection" */
     describe("New Feed Selection", function(){
             
-        /* TODO: Write a test that ensures when a new feed is loaded
+        /* Test ensures when a new feed is loaded
         *by the loadFeed function that the content actually changes.
-        *Remember, loadFeed() is asynchronous.
+        *loadFeed() is asynchronous.
         */
 
         //variables will hold feeds loaded by the loadFeed
