@@ -12,7 +12,7 @@ I have added to my skillset, the foundation of writing tests using Jasmine and t
 
 ## Credits
 The following sources proved helpful during the development of this project:
-1. [Matthew Crawford's Blog](https://matthewcranford.com/feed-reader-walkthrough-part-4-async-tests/)
+1. [Matthew Cranford's Blog](https://matthewcranford.com/feed-reader-walkthrough-part-4-async-tests/)
 2. [PlaySnowi GitHub Repository](https://github.com/PlaySnowi/Feed-Reader-Testing/blob/master/jasmine/spec/feedreader.js)
 
 ## Project Origin
