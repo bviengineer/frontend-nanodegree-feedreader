@@ -92,8 +92,8 @@ The following sources did the best job explaning or simplifying the async tests.
 */
     /* Test suite named "Initial Entries" */
     describe("Initial Entries", function(){
-        const feedContainer = document.querySelector(".feed");
-        console.log(feedContainer.children); //verifying content 
+        const feedContainer = document.getElementsByClassName("feed")[0].getElementsByClassName("entry");
+        console.log(feedContainer); //verifies container contains at least one(1) .entry element
 
         /* Test ensures when the loadFeed
          * function is called and completes its work, there is at least
@@ -105,7 +105,7 @@ The following sources did the best job explaning or simplifying the async tests.
         });
 
         it("load feed completed its work", function(){  
-            expect(feedContainer.children.length).toBeGreaterThan(0);
+            expect(feedContainer.length).toBeGreaterThan(0);
         });
     });
     
