@@ -9,7 +9,7 @@ This project consists of a web-based application that reads RSS feeds. In it's o
 * Alternatively, download the project as a zip file, unzip the folder and open the index.html file in your browser
 
 ## Takeaway
-Writing test using the Red, Green, Refactor (TDD) methodology, provides the benefit of understanding whehter new code will break or will not have any affect on [a] feature(s).
+* Writing test using the Red, Green, Refactor (TDD) methodology, provides the benefit of understanding whether new code will break or will not have any affect on [a] feature(s).
 
 ## Credits
 The following sources proved helpful during the development of this project:
